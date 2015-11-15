@@ -1,0 +1,263 @@
+s<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>商贸城</title>
+<link href="index.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/wy-mod-banner.css" media="screen">
+</head>
+
+<body>
+	
+  <div class="header1">
+  <div class="head">
+  <div class="logo"> <img src="image/logo1.png" width="135" height="45" />
+   </div> 
+<div id="header">
+   <ul id="nav">
+   <li>首 &nbsp; 页</li>
+   
+    <li><span>走进商城</span>
+      <ul>
+       <li><a href="#">董事长致辞</a></li>
+        <li><a href="#">商城简介</a></li>
+        <li><a href="#">组织架构</a></li>
+        <li><a href="#">管理团队</a></li>
+        <li><a href="#">大事记</a></li>
+        <li><a href="#">商城文化</a></li>
+      </ul>
+    </li>
+    <li><span>商城资讯</span>
+      <ul>
+       <li><a href="#">商城新闻</a></li>
+        <li><a href="#">商城简介</a></li>
+        <li><a href="#">组织架构</a></li>
+        <li><a href="#">管理团队</a></li>
+        <li><a href="#">大事记</a></li>
+        <li><a href="#">商城文化</a></li>
+      </ul>
+    </li>
+     <li><span>商城VIP</span>
+      <ul>
+        <li><a href="#">商城新闻</a></li>
+        <li><a href="#">商城简介</a></li>
+        <li><a href="#">组织架构</a></li>
+      </ul>
+    </li>
+   <li><span>招商合作</span>
+   <ul>
+        <li><a href="#">商城新闻</a></li>
+        <li><a href="#">商城简介</a></li>
+        <li><a href="#">组织架构</a></li>
+      </ul>
+      </li>
+   <li>品味生活</li>
+   <li><span>联系我们</span>
+    <ul>
+        <li><a href="#">商城新闻</a></li>
+        <li><a href="#">商城简介</a></li>
+        <li><a href="#">组织架构</a></li>
+      </ul>  
+   </li>  
+  </ul>
+</div>
+
+   </div>
+  
+</div>
+<div class="clear1">
+</div>
+
+<div class="wy-mod-banner" style="overflow:hidden;">
+	
+	<div id="_banners" class="banners">
+		<div class="banner banner4">
+			<img width="1600" height="500" src="images/banner4.jpg"  />
+			<div class="info">
+				
+				
+				<a href="http://www.17sucai.com/" class="link-download"><span>马上下载 </span><i class="bor_c"></i></a>
+			</div>
+		</div>
+		<div class="banner banner3">
+			<img width="1600" height="500" src="images/banner3.jpg"  />
+			<div class="info">
+				
+				
+				<a href="http://www.17sucai.com/" class="link-download"><span>马上下载 </span><i class="bor_c"></i></a>
+			</div>
+		</div>
+		<div class="banner banner2">
+			<img width="1600" height="500" src="images/banner2.jpg"  />
+			<div class="info">
+				
+				
+				<a href="http://www.17sucai.com/" class="link-download"><span>马上下载 </span><i class="bor_c"></i></a>
+			</div>
+		</div>
+		<div class="banner banner1">
+			<img width="1600" height="500" src="images/banner1.jpg"/>
+			<div class="info">
+			
+				
+				<a href="http://www.17sucai.com/" class="link-download"><span>马上下载</span> <i class="bor_c"></i></a>
+			</div>
+		</div>
+	</div>
+	
+	  <div id="_focus" class="focus">
+	  	<a data-index="0" href="javascript:void(0);" class="on"><span class="bg-b"></span><span class="inner"></span></a>
+		<a data-index="1" href="javascript:void(0);"><span class="bg-b"></span><span class="inner"></span></a>
+		<a data-index="2" href="javascript:void(0);"><span class="bg-b"></span><span class="inner"></span></a>
+		<a data-index="3" href="javascript:void(0);"><span class="bg-b"></span><span class="inner"></span></a>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+var glume = function(banners_id, focus_id){
+	this.$ctn = $('#' + banners_id);
+	this.$focus = $('#' + focus_id);
+	this.$adLis = null;
+	this.$btns = null;
+	this.switchSpeed = 5;//自动播放间隔(s)
+	this.defOpacity = 1;
+	this.crtIndex = 0;
+	this.adLength = 0;
+	this.timerSwitch = null;
+	this.init();
+};
+glume.prototype = {
+	fnNextIndex:function(){
+		return (this.crtIndex >= this.adLength-1)?0:this.crtIndex+1;
+	},
+	//动画切换
+	fnSwitch:function(toIndex){
+		if(this.crtIndex==toIndex){return;}
+		this.$adLis.css('zIndex', 0);
+		this.$adLis.filter(':eq('+this.crtIndex+')').css('zIndex', 2);
+		this.$adLis.filter(':eq('+toIndex+')').css('zIndex', 1);
+		this.$btns.removeClass('on');
+		this.$btns.filter(':eq('+toIndex+')').addClass('on');
+		var me = this;
+
+		$(this.$adLis[this.crtIndex]).animate({
+			opacity: 0
+		}, 1000, function() {
+			me.crtIndex = toIndex;
+			$(this).css({
+				opacity: me.defOpacity,
+				zIndex: 0
+			});
+		});
+	},
+	fnAutoPlay:function(){
+		this.fnSwitch(this.fnNextIndex());
+	},
+	fnPlay:function(){
+		var me = this;
+		me.timerSwitch = window.setInterval(function() {
+			me.fnAutoPlay();
+		},me.switchSpeed*1000);
+	},
+	fnStopPlay:function(){
+		window.clearTimeout(this.timerSwitch);
+		this.timerSwitch = null;
+	},
+
+	init:function(){
+		this.$adLis = this.$ctn.children();
+		this.$btns = this.$focus.children();
+		this.adLength = this.$adLis.length;
+
+		var me = this;
+		//点击切换
+		this.$focus.on('click', 'a', function(e) {
+			e.preventDefault();
+			var index = parseInt($(this).attr('data-index'), 10)
+			me.fnSwitch(index);
+		});
+		this.$adLis.filter(':eq('+ this.crtIndex +')').css('zIndex', 2);
+		this.fnPlay();
+
+		//hover时暂停动画
+		this.$ctn.hover(function() {
+			me.fnStopPlay();
+		}, function() {
+			me.fnPlay();
+		});
+
+		if($.browser.msie && $.browser.version < 7) {
+			this.$btns.hover(function() {
+				$(this).addClass('hover');
+			},function() {
+				$(this).removeClass('hover');
+			});
+		}
+	}
+};
+var player1 = new glume('_banners', '_focus');    
+</script>
+<div class="content">
+  <div class="content01">
+ <div class="shang"> </div>
+ <div class="zhong"> 
+   <div class="content-top">
+    <div class="ys01">
+    <h1>商场新闻</h1>
+    <ul>
+  <li>商场新闻商场新闻商场新闻商场新闻商场新闻商场新闻</li><hr/>
+  <li>商场新闻商场新闻商场新闻商场新闻</li><hr/>
+  <li>商场新闻商场新闻商场新闻商场新闻商场新闻商场</li><hr/>
+    </ul>
+    <p><a href="#">更多新闻</a></p>
+    </div>
+    
+    <div class="ys02">
+    <h1>促销信息|<span>DM快讯</span><span style=" float:right; font-size:6px"><a href="#">more>></a></span></h1>
+    <div class="lie01">
+    <ul>
+    <li><img src="image/wan.jpg" width="40" height="50" /></li>
+    <li><img src="image/wan.jpg" width="40" height="50" /></li>
+    <li><img src="image/wan.jpg" width="40" height="50" /></li>
+    </ul></div>
+    <div class="lie02">
+     <ul>
+         <li><span>【华南mall店】4.4-4.7百货新品1换3倍！微信分享赢千元好礼！</span><br>会员特权：购物达人送100元购物卡！超市满108元送10元！</li><hr/>
+         <li><span>【华南mall店】4.4-4.7百货新品1换3倍！微信分享赢千元好礼！</span><br>会员特权：购物达人送100元购物卡！超市满108元送10元！</li><hr/>
+         <li><span>【华南mall店】4.4-4.7百货新品1换3倍！微信分享赢千元好礼！</span><br>会员特权：购物达人送100元购物卡！超市满108元送10元！</li>
+      </ul></div>
+      
+    </div>
+   </div>
+   <div class="clear"></div>
+   <div class="content-down">
+   <img src="image/baihuo11.jpg" width="230" height="104" />
+   <img src="image/chaoshi11.jpg" width="230" height="104" />
+    <img src="image/shengxian1.jpg" width="230" height="104" />
+   </div>
+ </div>
+ 
+  </div>
+  <div class="content02">
+  <p><a href="#"><img src="image/xitong011.jpg" width="209" height="72" /></a></p>
+  <p><a href="#"><img src="image/xitong021.jpg" width="209" height="58" /></a></p>
+  <p><a href="#"><img src="image/weibiaoti-2.jpg" width="209" height="61" /></a></p>
+  <p><a href="#"><img src="image/temp15.jpg" width="209" height="93" /></a></p>
+  <p><img src="image/123.jpg" width="209" height="109" /></p>
+  </div>
+</div>
+<div class="zhuan">
+<img src="image/ainuosi.jpg" width="100" height="50" />
+<img src="image/andiluer.jpg" width="100" height="50" />
+<img src="image/anfen_fuben1.jpg" width="100" height="50" />
+<img src="image/anlifang.jpg" width="100" height="50" />
+<img src="image/baicaoji.jpg" width="100" height="50" />
+<img src="image/baoshilong.jpg" width="100" height="50" />
+<img src="image/DHC.jpg" width="100" height="49" />
+<img src="image/dani.jpg" width="100" height="50" /></div>
+<div class="footer">
+
+</div>
+</body>
+</html>

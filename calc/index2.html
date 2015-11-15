@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>计算器</title>
+<link  href="css1.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="jisuan">
+	<input id="inp" type="text" value="">
+    <div class="anniu">
+    	<div id="left">指示灯</div><div id="right" onClick="funon()">ON</div>
+        <button name="liuna" id="M+" value="M+">M+</button>
+        <button name="liuna" id="M-">M-</button>
+        <button name="liuna" id="Mrc" value="AC">AC</button>
+        
+        <button name="liuna" id="off">OFF</button>
+        <button name="liuna" id="a7" value="7">7</button>
+        <button name="liuna"id="a8" value="8">8</button>
+        <button name="liuna" id="a9" value="9">9</button>
+        <button name="liuna"id="chu" value="/">/</button>
+        
+        <button name="liuna"id="a4" value="4">4</button>
+        <button name="liuna"id="a5" value="5">5</button>
+        <button name="liuna"id="a6" value="6">6</button>
+        <button name="liuna"id="cheng" value="*">*</button>
+        
+        <button name="liuna"id="a1" value="1">1</button>
+        <button name="liuna"id="a2" value="2">2</button>
+        <button name="liuna"id="a3" value="3">3</button>
+        <button name="liuna"id="jian" value="-">-</button>
+        
+        <button name="liuna"class="0" value="0">0</button>
+        
+        <button name="liuna"id="dd0" value=".">.</button>
+        <button name="liuna"id="deng" value="=" style="background-color:#3CF">=</button>
+        <button name="liuna"id="jia" value="+">+</button>
+         
+    </div>
+</div>
+<script>
+	document.getElementById("inp").value="";
+	var obj=document.getElementsByName("liuna");
+	var den=document.getElementById("left");
+	var j=0,count=0,cIndex=-1;
+	var fn;
+	var b1,b2=-1;
+	var str="",f=false;
+	var flag=true;
+	var on=false;
+	function funon(){den.style.backgroundColor="#9FC";on=true;j=0;count=0;cIndex=-1; return;}
+	for(var i=0;i<obj.length;i++){
+		obj[i].onclick=	deal;
+	
+	}
+	
+	function deal(){
+		
+		count++;
+		var c=this.innerHTML;
+		if(c=="OFF"||!on){
+		den.style.backgroundColor="";
+		on=false;	 
+		document.getElementById("inp").value='';
+		return;
+		}
+		document.getElementById("inp").value+=c;
+		var opt=["+", "-", "*", "/", "=" ];
+		var index=opt.indexOf(c);
+		if(index!=-1){  //alert(c);alert(":     "+j);
+			if(j==0){
+				b1= parseFloat(str);
+			}else{
+				b2= parseFloat(str);// alert(b1); 				//alert(b2);
+				if(str!=""){
+					b1=calc(b1,b2, fn);
+					document.getElementById("inp").value=b1;
+					if(c=="=")
+						cIndex=count;
+					else
+						document.getElementById("inp").value+=c;
+				}
+			}
+			str="";		
+			fn=c;	
+			j++;
+		}else if(c=="AC"){
+			document.getElementById("inp").value="0";
+			j=0;
+			str="";
+			flag=false;
+			
+			}
+		
+		else{
+			if((count-1)==cIndex){
+				document.getElementById("inp").value=c;
+				j=0;	
+			}
+			else if(!flag){
+				document.getElementById("inp").value=c;
+				flag=true;
+				}
+			str+=c;
+					
+		}
+	}
+	function calc(a,b,o){
+		var sum;
+		switch(o){
+			case "+":sum=a+b;
+				break;
+			case "-":sum=a-b;
+				break;
+			case "*":sum=a*b;
+				break;
+			case "/":sum=a/b;
+				break;
+		}
+		return sum;
+	}
+	//obj[0].onclick=function(){alert(2)}
+//	alert(obj[0].innerHTML);
+	
+	
+	/*
+	var but=document.get("button");
+	but.onclick=function(){	
+	//document.getElementById("inp").value=but.value;
+	alert('');
+	
+}*/
+</script>
+</body>
+</html>

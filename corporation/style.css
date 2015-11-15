@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+body,p,h1,h2,h3,h4,ul,dl,dt,dd { margin:0px; padding:0px;}
+.clear{clear:both;}
+a,a:hover{ text-decoration:none;}
+li{ list-style:none;}
+.gray{ color:#999;}
+.px36{ font-size:36px;}
+.px24{ font-size:24px;}
+.green{ color:#090;}
+.blue{ color:#09F;}
+.upside{ height:80px; background-color:#2d3e50;}
+.Cationer,.cust-ser{ margin:0 auto; width:1000px;}
+.logo{ position:absolute; top:20px}
+.top-right{ float:right; width:720px;}
+.atta{ width:300px; float:right; font-size:12px; color:#999;}
+.ation{ margin-right:6px;float:left;width:200px;}
+.ation a{ color:#8bb52a;}
+.stor{ float:right;width:90px; }
+.stor a{color:#999; }
+.stor a:hover{color:#8bb52a;}
+.nav{width:650px; height:20px; margin-top:40px;}
+.nav li{ float:left; display:inline-block; margin:0 8px;}
+.nav li a{ padding:5px 10px; font-size:14px; font-family:"黑体"; font-weight:bold; text-decoration:none; color:#15a7d7;}
+.nav li a:hover{ color:#8bb52a; background-color:#1d2635;box-shadow: inset 1px 1px 2px #000;}
+.nav li a:active{ color:#8bb52a; background-color:#1d2635;}
+/*轮播图*/
+.wy-mod-banner{height:400px;position:relative;overflow:hidden;}
+.wy-mod-banner .banners{width:1600px;height:400px;overflow:hidden;position:absolute;left:50%;margin-left:-800px;}
+.wy-mod-banner .banner{width:1600px;height:400px;overflow:hidden;position:absolute;left:50%;margin-left:-800px;}
+.wy-mod-banner .focus{width:960px;margin:0px auto;padding-top:360px;text-align:center;}
+.wy-mod-banner .focus a{text-decoration:none;z-index:3;width:24px;height:74px;position:relative;display:inline-block;*display:inline;overflow:hidden;margin:0px 3px;zoom:1;}
+.wy-mod-banner .focus a .bg-m{z-index:4;color:white;line-height:40px;font-size:40px;position:absolute;display:block;left:2px;top:6px;cursor:pointer; display:none;}
+.wy-mod-banner .focus a .bg-b{background-image:url(images/i_dot.32.png);position:absolute;display:block;left:0px;top:0px;cursor:pointer; width:16px; height:16px;}
+.wy-mod-banner .focus a .inner{background-image:url(images/i_dot_hover.32.png);position:absolute;left:0px;top:0px;z-index:9;opacity:0;display:none\0;+display:none;*display:none; width:16px;height:16px;}
+.wy-mod-banner .focus a.on .inner,.wy-mod-banner .focus a:hover .inner{cursor:pointer;display:block;border:0;-webkit-transition:opacity .3s ease-in-out;-ms-transition:opacity .3s ease-in-out;transition:opacity .3s ease-in-out;opacity:1;}
+.wy-mod-banner .focus .hover .inner{display:block;}
+.Con-center{ margin-top:20px;}
+.cen_left{ width:460px; float:left; margin-right:40px;}
+.cen_left p{ font-size:12px; line-height:20px;}
+.head-first{ margin-bottom:10px;}
+.head-first a{ color:#999;font-size:12px;}
+.head-first img{ vertical-align:middle;}
+.cen_right{width:462px; float:left; margin-left:38px;}
+.img01{ float:left; margin-right:6px;}
+.img02{ float:left; margin-right:6px;}
+.img03{ float:right;}
+
+.wd25{ width:234px;}
+.ite{ position:relative; padding-top:16px;}
+.serone .ite-img{margin-left:22px; width:120px; height:67px; background:url(images/cont-ico.jpg) no-repeat;}
+.sertwo .ite-img{margin-left:22px; width:120px; height:67px; background:url(images/cont-ico.jpg) no-repeat 0 -67px;}
+.serthree .ite-img{margin-left:22px; width:120px; height:67px; background:url(images/cont-ico.jpg) no-repeat 0 -134px;}
+.serfour .ite-img{margin-left:22px; width:120px; height:67px; background:url(images/cont-ico.jpg) no-repeat 0 -202px;}
+.ite h4 { text-align:center; margin:10px 0;}
+.ite p { text-align:center; height:120px; font-size:12px; color:#333; line-height:24px;overflow:hidden;}
+.ite .serone{ margin-right:20px; float:left;}
+.ite .sertwo{ margin-right:20px; float:left;}
+.ite .serthree{ margin-right:20px; float:left;}
+.ite .serfour{ float:right;}
+
+.konWe{ font-size:14px; font-family:"黑体"; width:90px; line-height:50px; height:50px; float:right;}
+.konWe a{ color:#090;}
+.konWe a:hover{ color:#0F0;}
+
+.infor{height:200px; background:url(images/ICWJa_1024.jpg) repeat-x;}
+.infor dl{ float:left; width:380px; height:170px; overflow:hidden; margin-right:20px;}
+.infor dl dt{ margin:18px 0;}
+.infor dl dt a{ color:#000;}
+.infor dl dd{ margin-top:16px; line-height:26px; font-size:12px;}
+.infor dl dd a{white-space: nowrap; float:left; width:280px; color:#666; overflow:hidden;}
+.infor dl dd .time{ width:70px; color:#666; margin-left:30px; float:right;}
+.infor .erw{ float:right; margin-top:56px;}
+.cust-ser p{ height:30px; color:#090; font-size:15px; margin-left:20px;}
+.cust-ser p span{ color:#000;font-size:14px; margin-right:20px;}
+.foot{ height:54px; background-color:#000;}
+.foot ul{ height:54px; background-color:#000;}
+.foot ul li{color:#666; line-height:54px; float:left; margin:0 5px;}
+.foot ul li a{ font-size:12px; color:#666; margin-right:8px;}

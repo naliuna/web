@@ -1,0 +1,47 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+
+
+.ne-content{ width:1000px; margin:0 auto; margin-top:5px;}
+.ne-left{ float:left;}
+.xi-cont{ background-color:#000066; width:329px; height:211px; }
+h3{ font-size:14px; font-weight:bold; color: #3CF; margin-top:0px; margin-left:10px;}
+.xi-cont img{ vertical-align:middle;}
+.xi-cont p{ text-indent:2em; font-size:12px; color:#CCC;}
+.ne-right{ float:right;}
+.clear{ margin:0px; padding:0px; clear:both;}
+
+.chatu{ width:1000px;margin:0 auto;}
+.ne-substance{ width:1000px; margin:0 auto;}
+.ne-sub-left{ float:left; width:317px;}
+.dh-lanm ul{ list-style:none; margin-top:-4px;}
+.dh-lanm ul li{ width:317px; height:50px; background-color:#CCC; margin-top:4px; margin-left:-40px;}
+.dh-lanm ul li a{ width:305px;font-size:14px;height:50px; line-height:50px; color: #006; font-family:"黑体";  display:inline-block; text-decoration: none;padding:0 0 0 15px; }
+.dh-lanm ul li a:hover{ width:305px;background-color:#00cccc;  display:inline-block;  height:50px; line-height:50px; text-decoration:none;padding:0 0 0 15px; }
+.dh-lanm ul li a:active{width:305px; background-color:#39F;  display:inline-block; height:50px; line-height:50px;padding:0 0 0 15px; }
+.dh-lanm ul li a:visited{width:305px; background-color:#00cccc;  display:inline-block; height:50px; line-height:50px;padding:0 0 0 15px; }
+.dh-lanm li img{ vertical-align:middle;border:none;}
+.jianxi{ float:left; margin-top:-5px; margin-right:-10px;}
+
+.ne-sub-right{ width:630px; float:right; padding:5px; text-indent:2em; font-size:12px; color:#333;}
+h4{ font-size:14px; font-weight:bold; color:#000; text-align:center;}
+
+
+.sortw{ width:1000px; margin:0 auto;}
+.sortw a{ font-size:12px;  margin-right:25px; margin-top:10px; text-decoration:none; color:#333;}
+.sortw a:hover{ color:#F00; text-decoration:none;}
+.sortw a:active{ color:#F00; text-decoration:none;}
+.sortw a:avisited{ color:#F00; text-decoration:none;}
+/*.sortw a:visited{color:#F00; text-decoration:underline;}*/
+.fenlei{ width:1000px; height:80px; background-color:#CCC; padding:10px 15px;}
+.fenlei p{ text-align:center;}
+.fenlei p span { font-size:14px; color:#000; font-weight:bold; float:left;}
+.fenlei  ul{ list-style:none;}
+.fenlei ul li{ float:left; height:30px; line-height:20px; color:#333;width:76px;}
+
+.wangli{ width:1000px; margin:0 auto;}
+.wangli ul{ list-style:none;}
+.wangli ul li{ width:240px; height:220px; float:left;}
+.wangli li a{font-size:13px; color:#333; text-decoration:none;}
+.wangli li a:hover{color:#F00; text-decoration:underline;}

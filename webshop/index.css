@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+body{margin:0px;padding:0px;  background: transparent url(page_bkg.png) repeat scroll top center;}
+.header1{ background-image: url(image/headj.jpg); background-repeat:repeat-x no-repeat; height:98px;}
+.head{ height:97px; width:980px; margin:0 auto;}
+.logo{ width:135px; height:45px; padding-top:20px; float:left;}
+.header{ margin-right:10px;}
+ #nav { margin:0px; padding:0px; position:absolute; top: 60px; left:400px; display:block; z-index:999;font-weight:bold;}
+        #nav > li { list-style-type:none; float:left; display:block; margin:0px 5px; 
+                    position:relative; padding:5px; width:90px;}
+        #nav > li:hover ul { display:block; }
+        #nav > li:hover { background-color:#808080; -moz-border-radius:10px; -webkit-border-radius:10px; }
+        #nav li ul { margin:0px; padding:0px; display:none;}
+        #nav li ul li { list-style-type:none; margin:6px 0 0 0;}
+        #nav li ul li a { display:block; padding:5px 10px; color:#FFF; text-decoration:none;}
+        #nav li ul li:hover a { background-color:#606060; -moz-border-radius:5px; -webkit-border-radius:5px;}
+        #nav li span { cursor:pointer; margin:0px 10px; font-weight:bold; }
+
+.content{ width:980px; height:472px; margin:0 auto;}
+.content01{ width:754px; height:470px; float:left;}
+  .shang{ width:752px; height:15px;}
+  .zhong{ width:752px; height:460px;}
+    h1{ font-size:16px; text-indent:1em;}
+	    .ys01{ width:214px;float:left; border-left:#CCC 1px solid; border-top:#CCC 1px solid;}
+		   .ys01 ul li{ font-size:12px;}
+		   .ys01 p{ width:140px; height:40px; background-color:#930; margin-left:40px; margin-top:20px;}
+		   .ys01 p:hover{ background-color:#990; text-decoration:none;}
+		   .ys01 a{font-size:14px; font-weight:bold; line-height:40px; margin-left:40px; color:#FFF; text-decoration:none;}
+	    .ys02{ width:530px; height:285px; float:right; border:#CCC 1px solid;}
+		    h1 span{ font-size:16px; color:#666;}
+			.lie01{width:50px; float:left;}
+			.lie01 ul li{ height:70px; margin-top:10px;}
+			.lie02{width:460px; float:right;}
+			.ys02 ul{ list-style:none;}
+		    .ys02 ul li{ height:60px;}
+		    .ys02 ul li span{ font-size:14px; color:#F00; font-weight:400;}
+		.clear{ margin:0px; padding:0px; clear:both;}
+	 .content-down{ height:148px; border:#CCC 1px solid; margin-top:20px;}
+	 .content-down img{margin-left:10px; margin-top:20px;}
+	 
+  
+.content02{ width:212px; height:472px; float:right; overflow:hidden;}
+.content02 img{ border-style:none;}
+ .zhuan{ width:980px; height:100px; margin:0 auto; margin-top:20px; border:#CCC 1px solid;}
+  .zhuan img{ margin:30px 0 0 13px;}
+  .footer{ height:400px; background-color:#666; margin-top:30px;}

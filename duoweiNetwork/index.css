@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{ margin:0px; padding:0px;}
+.ye-top{ background-image:url(images/wangye001.jpg); background-repeat:no-repeat repeat-x; height:42px;}
+.topner{ width:1000px; margin:0 auto;}
+.topner p{ font-size:11px; color:#CCC; float:right; margin-top:18px;}
+.topner p span{ color:#FC0; font-size:14px;}
+.topner a{ color:#FFF; text-decoration:none;}
+.topner a:hover{ color:#F00;}
+
+#ye-header{ width:1000px; height:103px; margin:0 auto;}
+.logo{ float:left;}
+.daohang{ float:right; margin-top:30px;}
+.daohang img{ vertical-align:middle;}
+.daohang ul{ list-style:none;}
+ .daohang ul li{ float:left; width:105px;}
+ .daohang a{ text-align:center; font-size:14px; color:#009; font-family:"黑体"; font-weight:500; text-decoration:none;}
+ .daohang a:hover{  color:#F33;}
+.clear{ margin:0px; padding:0px; clear:both;}
+
+ .ye-xuanchuan{ margin:0 auto; width:1440px; height:350px; margin-top:-17px;}
+ .ye-xuanchuan p{ text-align:center;}
+ .tupdi{ height:8px; background-color:#006;}
+.line{ height:14px; background-image: url(images/ciyeline1.gif); background-repeat:no-repeat repeat-x;}
+ 
+ .sicaid{ width:1000px; margin:0 auto; height:120px;}
+ .c-one{ background-image:url(images/wangyebeij01.gif); width:250px; height:118px; float:left;}
+   h2{ font-size:14px; color:#006; font-family:"宋体"; font-weight:bold;}
+   .sicaid img{ float:left; margin-top:30px; margin-left:10px;}
+ .sicaid  ul li a{ font-size:12px; text-decoration:none; color:#333;}
+ .sicaid  ul a:hover{ color:#F30; font-size:14px;}
+ .c-two{ background-image:url(images/wangyebeij02.gif); width:250px; height:118px; float:left;}
+ .c-three{ background-image:url(images/wangyebeij02.gif); width:250px; height:118px; float:left;}
+ .c-four{ background-image:url(images/wangyebeij03.gif); width:250px; height:118px; float:right;}
+  
+  .content{ width:1000px; margin:0 auto; margin-top:20px;}
+  h1{ font-size:16px; font-family:"微软雅黑"; text-align:justify; height:16px; line-height:16px;}
+  .content01{ float:left;}
+  .con-xinwen{width:374px; margin-top:-5px;}
+    .biaoti1{ height:27px; width:374px;border-bottom:8px solid #006;}
+    .xin-lie{ width:372px;height:148px; border:#CCC 1px solid;}
+  .con-lianx{ width:374px;}
+    .biaoti2{ height:27px; width:374px; border-bottom:8px solid #006;}
+	.lian-lie{ width:372px; height:118px; border:#CCC 1px solid;}
+   .content02{ width:603px; height:355px; float:right; background-color:#CACACA;}
+   .content02 h1 span{ margin-left:280px; font-size:10px; color:#000;}
+   .anlizs{ width:603px; height:270px; background-color:#FFF;}
+   .anlizs ul{ list-style:none;}
+   .anlizs ul li{ width:140px; height:120px; float:left; display:block; margin-top:12px;}
+   .anlizs li a{ height:120px;  font-size:12px; text-decoration:none; display:block;}
+   .anlizs a:hover{ color:#F30;}
+   .anlizs ul li p{ text-align:center; height:14px;}
+    .anlizs ul li img{ border:#CCC 1px solid;}
+   .anlizs ul li img:hover{ border:#F30 1px solid;}
+   .anlizs ul li img:visited{ border:#F30 1px solid;}
+   
+  .gongfw{ width:1000px; margin:0 auto; height:222px; margin-top:25px; background-image:url(images/wangye003.gif); background-repeat:no-repeat repeat-x;}
+  
+  .dingw{ width:1000px; margin:0 auto; margin-top:20px;}
+  .wxuan{ width:490px; float:left;}
+  .guanyu{ height:290px; width:490px; float:right; padding:5px;  }
+ .guanyu p{text-indent:2em; font-size:14px;}
+  dl{ width:240px; margin-left:10px; float:left;}
+  dt{ font-size:14px; color:#FFF; font-weight:bold; height:30px;}
+  dd{ font-size:12px; margin-top:10px;}
+ 
+
+ .footer{ height:150px;  background-color:#003; margin-top:10px;}
+  .footer p{ text-align:center; font-size:12px; color:#CCC; height:16px; line-height:16px;}
+  .footer a{ text-decoration:none; font-size:13px; color:#CCC;}
